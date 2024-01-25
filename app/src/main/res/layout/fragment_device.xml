@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.DeviceFragment">
+
+
+    <ListView
+        android:id="@+id/scannerList"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/relayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scannerList"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R1"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+        <TextView
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R2"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+        <TextView
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+        <TextView
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R4"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

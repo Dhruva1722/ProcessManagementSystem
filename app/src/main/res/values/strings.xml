@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ProcessScanner(Stockmarket)</string>
+    <string name="nav_open">open\n</string>
+    <string name="nav_close">close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="copyright_notice">© Copyright Notice
+        \n\nThis product/design/reports/layouts are entirely under Multispan Control Instruments Pvt. Ltd. copyrights.
+        \n\nDirect/Indirect usage of contents/design/layouts to other integrations is an offense. In case of synchranous/asynchranous parameters/configurations plotting over the field instruments, associated with this interface, any malfunction/misbehavior on the field-realtime is directly under customer scope.
+        \n\nMultispan is not responsible for any disaster caused on the field due to improper inputs from this interface or improper internet connection.
+        \n\nIn this case, Multispan will take action against any misbehavioral act.
+    </string>
+
+</resources>

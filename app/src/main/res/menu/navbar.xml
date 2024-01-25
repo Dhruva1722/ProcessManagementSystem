@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_device"
+        android:title="Device Management"
+        android:icon="@drawable/baseline_devices_24"/>
+
+    <item
+        android:id="@+id/nav_analytics"
+        android:title="Analytics"
+        android:icon="@drawable/baseline_analytics_24"/>
+
+    <item
+        android:id="@+id/nav_allChannels"
+        android:title="All Channels"
+        android:icon="@drawable/baseline_wifi_channel_24"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_person_24"/>
+
+
+    <item
+        android:id="@+id/nav_termscondition"
+        android:title="Terms and Conditions"
+        android:icon="@drawable/baseline_error_outline_24"/>
+
+
+</menu>

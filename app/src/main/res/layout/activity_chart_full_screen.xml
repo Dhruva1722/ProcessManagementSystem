@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChannelsActivity.ChartFullScreen"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"/>
+
+
+    <ImageView
+        android:id="@+id/exportBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/file"
+        android:layout_alignParentRight="true" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chartFullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backBtn"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>
