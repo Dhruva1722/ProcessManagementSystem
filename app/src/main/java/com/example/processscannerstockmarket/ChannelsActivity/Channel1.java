@@ -165,35 +165,79 @@ public class Channel1 extends AppCompatActivity {
         setData(50, 100);
     }
 
+//    private void setData(int count, float range) {
+//        ArrayList<Entry> yVals = new ArrayList<>();
+//        for (int i = 0; i < count; i++) {
+//            float val = (float) (Math.random() * range) - 200; // Adjust range to include negative values
+//            yVals.add(new Entry(i, val));
+//        }
+//
+//        ArrayList<Entry> yVals1 = new ArrayList<>();
+//        for (int i = 0; i < count; i++) {
+//            float val = (float) (Math.random() * range) - 200; // Adjust range to include negative values
+//            yVals1.add(new Entry(i, val));
+//        }
+//
+//        LineDataSet set1, set2;
+//
+//        set1 = new LineDataSet(yVals, "Data Set1");
+//        set1.setColor(Color.RED);
+//        set1.setDrawCircles(true);
+//        set1.setDrawFilled(true);
+//        set1.setFillColor(fillColor);
+//
+////        set2 = new LineDataSet(yVals1, "Data Set2");
+////        set2.setColor(Color.BLUE); // Change color if needed
+////        set2.setDrawCircles(true);
+////        set2.setDrawFilled(true);
+////        set2.setFillColor(fillColor);
+//
+//        // Customizing axis minimum to include negative values
+//        YAxis leftAxis = lineChart.getAxisLeft();
+//        leftAxis.setAxisMinimum(-200); // Adjust as per your requirement
+//
+////        LineData data = new LineData(set2, set1);
+//        LineData data = new LineData( set1);
+//        data.setDrawValues(true);
+//        lineChart.setData(data);
+//    }
+
+
+
     private void setData(int count, float range) {
         ArrayList<Entry> yVals = new ArrayList<>();
+        boolean hasNegativeValues = false;
+
         for (int i = 0; i < count; i++) {
-            float val = (float) (Math.random() * range) + 400;
+            float val = (float) (Math.random() * range) - (range / 2); // Include negative values
             yVals.add(new Entry(i, val));
+
+            if (val < 0) {
+                hasNegativeValues = true;
+            }
         }
 
-        ArrayList<Entry> yVals1 = new ArrayList<>();
-        for (int i = 0; i < count; i++) {
-            float val = (float) (Math.random() * range) + 150;
-            yVals1.add(new Entry(i, val));
+        LineDataSet dataSet = new LineDataSet(yVals, "Data Set");
+
+        if (hasNegativeValues) {
+            // Adjust the axis minimum to include negative values
+            YAxis leftAxis = lineChart.getAxisLeft();
+            leftAxis.setAxisMinimum(getMinimumValue(yVals));
         }
 
-        LineDataSet set1, set2;
-
-        set1 = new LineDataSet(yVals, "Data Set1");
-        set1.setColor(Color.RED);
-        set1.setDrawCircles(true);
-        set1.setDrawFilled(true);
-        set1.setFillColor(fillColor);
-
-        set2 = new LineDataSet(yVals1, "Data Set1");
-        set2.setColor(Color.RED);
-        set2.setDrawCircles(true);
-        set2.setDrawFilled(true);
-        set2.setFillColor(fillColor);
-
-        LineData data = new LineData(set2, set1);
+        LineData data = new LineData(dataSet);
         data.setDrawValues(true);
         lineChart.setData(data);
+    }
+
+    private float getMinimumValue(ArrayList<Entry> entries) {
+        float min = Float.MAX_VALUE;
+        for (Entry entry : entries) {
+            if (entry.getY() < min) {
+                min = entry.getY();
+            }
+        }
+        // Add some padding to the minimum value for better visualization
+        return min - 10; // Adjust the padding as needed
     }
 }
